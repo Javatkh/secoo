@@ -1,0 +1,140 @@
+.subpages{
+	background: #ededed;
+}
+.subpages-main{
+	background: #fff;
+	overflow: hidden;
+	padding:0 0 40px 0;
+}
+.subpages-main-m{
+	width: 1050px;
+	/*height: 2000px;*/
+	/*background: blue;*/
+	margin:40px 75px;
+}
+.subpages-main .subpages_shop{
+	width: 250px;
+	height: 321px;
+	padding:5px 5px;
+	/*background:red;*/
+	float: left;
+	margin:10px 4px;
+	box-sizing: border-box;
+	border:1px solid #fff;
+	position: relative;
+	/*自动分配*/
+	/*display: flex;
+	justify-content: space-between;*/
+	
+}
+.subpages-main .subpages_shop:hover{
+	/*border:1px solid #ebebeb;*/
+	border:1px solid #999;
+	border-bottom:none;
+}
+.subpages-main .subpages_shop .img img{
+	width: 230px;
+	height: 240px;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #ebebeb;
+	transition: all 0.7s;
+}
+.subpages-main .subpages_shop:hover .img img{
+	transform:rotateY(180deg);
+	
+}
+.subpages-main .subpages_shop>p{
+	font-size:6px;
+	color:#323232;
+}
+.subpages-main .subpages_shop>p a:hover{
+	text-decoration:underline;
+}
+.subpages-main .subpages_shop h3{
+	font-size: 9px;
+	font-weight: 700;
+	margin-top: 10px;
+}
+.subpages_jrshop{
+	display: block;
+	position: absolute;
+	left: -1px;
+	top: 320px;
+	width: 248px;
+	height: 39px;
+	/*background:yellow;*/
+	line-height:39px;
+	display: none;
+	z-index: 2;
+}
+.subpages-main .subpages_shop:hover .subpages_jrshop{
+	display: block;
+	/*border:1px solid #ebebeb;*/
+	border:1px solid #999;
+	border-top:none;
+}
+.subpages_jrshop .btn{
+	width: 80px;
+	height: 22px;
+	line-height: 22px;
+	background: #e93b39;
+	font-size:6px;
+	color: #fff;
+	border-style: none;
+	/*outline: none;*/
+	cursor:pointer;
+	margin-left: 10px;
+}
+.subpages_jrshop span{
+	font-size:6px;
+	color:#323232;
+	float: right;
+	margin-right: 10px;
+	cursor:pointer;
+}
+.sub_fenye{
+	width: 1200px;
+	height: 30px;
+	background:#fff;
+	margin:0 auto;
+}
+.pagination{
+	margin-top:3px;
+	margin-left: 346px;
+	height:22px;
+	line-height: 22px;
+	border-style: none;
+}
+
+.pagination a.previous{
+	width: 52px;
+	height: 22px;
+	border:none;
+	border: 1px solid #cccccc;
+	font-size: 11px;
+	color: #ccc;
+	margin-right: 9px;
+	background: #fff;
+}
+.pagination a.previous:hover{
+	background: #ccc;
+	color:#fff;
+}
+.pagination a.previous:active{
+	background: #ccc;
+	color:#fff;
+}
+.pagination a.last{
+	width: 52px;
+	height: 22px;
+	border:none;
+	border: 1px solid #cccccc;
+	font-size: 11px;
+	color: #ccc;
+	margin-right: 9px;
+	background: #fff;
+}
+.pagination input{
+	border:1px solid #ccc;
+	margin-right: 9px;
+}

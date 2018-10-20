@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>购物车</title>
+	<link rel="icon" type="image/x-icon" href="favicon.ico" />
+	<link rel="stylesheet" href="css/shop.css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/baiduTemplate.js"></script>
+	<script src="js/cookie.js"></script>
+</head>
+<body>
+	<div class="shop">
+		<div class="shop_top">
+			<img src="images/logo.png" alt="">
+			<div class="liucheng">
+				<img src="images/c_05.jpg" alt="">
+			</div>
+		</div>
+
+		<div class="shop_main">
+			<div class="shop_main_f">
+				<div class="shop_main_f_1">
+					<input value="on" type="checkbox">全选
+					<span class="first_1">
+						商品名称
+					</span>
+					<span class="sec_2">
+						发货站
+					</span>
+					<span class="sec_3">
+						价格
+					</span>
+					<span class="sec_4">
+						数量
+					</span>
+					<span class="sec_5">
+						金额小计
+					</span>
+					<span class="sec_6">
+						操作
+					</span>
+				</div>
+				<!-- 商品 -->
+				<!-- <div class="shop_main_f_2">
+					<div class="ff">
+						<input type="checkbox">
+						<img src="images/101.jpg" alt="">
+					</div>
+					<div class="cc">
+						<span class="name">LEXON/乐上手工限量复古风格木质自行车</span>
+						<span class="cc_2">
+							中国大陆
+						</span>
+						<span class="cc_3">
+							¥13,440
+						</span>
+						<button id="num-jian">-</button>
+						<input id="input-num" type="text" value="1">
+						<button id="num-jia"  class="jia">+</button>
+						<span class="cc_4">
+							¥ <span>67200</span>元
+						</span>
+						<span class="cc_5">
+							删除
+						</span>
+					</div>
+				</div> -->
+				<!-- <div class="shop_main_f_2">
+					<div class="ff">
+						<input type="checkbox">
+						<img src="images/102.jpg" alt="">
+					</div>
+					<div class="cc">
+						<span class="name">	Mulberry/玛百莉Leighton小号女士牛皮手提包HH5370/657G130</span>
+						<span class="cc_2">
+							中国大陆
+						</span>
+						<span class="cc_3">
+							¥10,500
+						</span>
+						<button id="num-jian">-</button>
+						<input id="input-num" type="text" value="1">
+						<button id="num-jia"  class="jia">+</button>
+						<span class="cc_4">
+							¥<span>10500</span>元
+						</span>
+						<span class="cc_5">
+							删除
+						</span>
+					</div>
+				</div>
+				第三件
+				<div class="shop_main_f_2">
+					<div class="ff">
+						<input type="checkbox">
+						<img src="images/102.jpg" alt="">
+					</div>
+					<div class="cc">
+						<span class="name">	Mulberry/玛百莉Leighton小号女士牛皮手提包HH5370/657G130</span>
+						<span class="cc_2">
+							中国大陆
+						</span>
+						<span class="cc_3">
+							¥10,500
+						</span>
+						<button id="num-jian">-</button>
+						<input id="input-num" type="text" value="1">
+						<button id="num-jia"  class="jia">+</button>
+						<span class="cc_4">
+							¥<span>10500</span>元
+						</span>
+						<span class="cc_5">
+							删除
+						</span>
+					</div>
+				</div> 
+				<div class="shop_main_f_2">
+					<div class="ff">
+						<input type="checkbox">
+						<img src="images/102.jpg" alt="">
+					</div>
+					<div class="cc">
+						<span class="name">	Mulberry/玛百莉Leighton小号女士牛皮手提包HH5370/657G130</span>
+						<span class="cc_2">
+							中国大陆
+						</span>
+						<span class="cc_3">
+							¥10,500
+						</span>
+						<button id="num-jian">-</button>
+						<input id="input-num" type="text" value="1">
+						<button id="num-jia"  class="jia">+</button>
+						<span class="cc_4">
+							¥<span>10500</span>元
+						</span>
+						<span class="cc_5">
+							删除
+						</span>
+					</div>
+				</div>-->
+				<div class="whi">
+					<div class="whi_top">
+						<input type="checkbox">全选
+						<span>删除选中商品</span>	
+						<span class="whi_1">商品数量总计：6件</span>
+					</div>
+					<div><span class="whi_2">商品数量总计：0件</span></div>
+					
+					<div><span class="whi_3">返利库币：0库币</span></div>
+					<div><span class="whi_4">商品金额总计（不含税金和运费）：<span>0.00</span></span></div>
+					<div class="bb">
+						<button class="btn_1">
+							继续购物
+						</button>
+						<button class="btn_2">
+							立即结算
+						</button>
+					</div>
+				</div>
+				<div class="shop_foot">
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="shop_fan" class="shop_fan" onclick="backTop()"></div>
+
+	<!-- json引入 -->
+	<script id="temp" type="text/html">
+		<div>
+            <%for(var i=0; i<shop.length; i++){%>
+				<div class="shop_main_f_2">
+					<div class="ff">
+						<input type="checkbox">
+						<img src="<%=shop[i].url%>" alt="">
+					</div>
+					<div class="cc">
+						<span class="name"><%=shop[i].name%></span>
+						<span class="cc_2">
+							中国大陆
+						</span>
+						<span class="cc_3">
+							¥13,440
+						</span>
+						<button id="num-jian">-</button>
+						<input id="input-num" type="text" value="1">
+						<button id="num-jia"  class="jia">+</button>
+						<span class="cc_4">
+							¥ <span><%=shop[i].price%></span>元
+						</span>
+						<span class="cc_5">
+							删除
+						</span>
+					</div>
+				</div>
+			<%}%>
+        </div>
+	</script>
+	<script src="js/shop.js"></script>
+</body>
+</html>
